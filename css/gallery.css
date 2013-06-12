@@ -1,0 +1,39 @@
+/* 
+ * $Log: gallery.css,v $
+ * Revision 1.1  2008-07-02 21:20:37  michi
+ * 	- this css provides the required styles used in main.php
+ *
+ */
+
+a  img {
+ border: 0 none;
+}
+
+#navButton {
+ border: medium solid blue;
+ background-color: blue;
+ color: white;
+}
+
+#navButton:focus {
+ border: medium dotted white;
+}
+
+#navButton:active {
+ border: medium dotted white;
+}
+
+#navTable {
+ width:100%;
+ text-align:center;
+}
+
+#imgTable {
+ width:100%;
+ text-align:center;
+}
+
+#imgTableRow {
+ width:100%;
+ text-align:center;
+}

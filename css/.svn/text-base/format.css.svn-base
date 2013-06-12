@@ -1,0 +1,157 @@
+a:link {
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+a:visited {
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+a:hover {
+	font-weight: bold;
+	color: #00ffcc;
+	text-decoration:none;
+}
+
+a:active {
+	font-weight: bold;
+	text-decoration:none;
+}
+
+body {
+	margin: 0; /* Keine Ränder und Innenabstände beim body */
+	padding: 0;
+}
+	
+#main {  
+	margin:0 auto; /* Kein Rand oben und unten, sowie auto-rand links und recht für zentrierung */
+	width:800px;
+	height:600px;
+	padding: 10px 0 0 10px;  /* Padding oben und links, damit  der 'Schatten' nicht überschrieben wird*/
+	background-image:url(./images/background3.png);
+	background-repeat: no-repeat;
+}
+	
+#header {
+	height:120px;
+	background-image:url(./images/title3.png);
+	background-repeat: no-repeat;
+}
+
+@media all{
+}
+	
+#navigation {
+	height:auto;
+	float:left;
+	margin: 0.75em 0 0 0;
+	border-right:0px solid black;
+	font:bold 1em Arial,sans-serif;
+	text-align:center;
+	color:#ffffff;
+}
+  
+#nav_top {
+	width:140px;
+	height:30px;
+	margin:0;
+	padding:0;
+	background-image: url(./images/nav_top.png);
+	background-repeat: no-repeat;
+}
+
+#nav_body {
+	width:140px;
+	margin:0;
+	padding:0;
+	background-image: url(./images/nav_body.png);
+	background-repeat: repeat-y;
+}
+
+#nav_bottom {
+	width:140px;
+	height:30px;
+	margin:0;
+	padding:0;
+	background-image: url(./images/nav_bottom.png);
+	background-repeat: no-repeat;
+}
+	
+#nav_body a {
+	color:#ffffff;
+}
+			
+#nav_body a:link {    
+	text-decoration:none;
+}
+	
+#nav_body a:visited {
+	text-decoration:none;
+}
+	
+#nav_body a:hover {
+	text-decoration:none;
+	color:#00ffcc;
+}
+	
+#nav_body a:active {
+	text-decoration:none;
+}
+	
+#content {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size:  1em;
+	position: relative;
+	padding: 0.5em;
+	margin: 0.5em 0.5em 0.5em 150px ;
+}
+	
+#footer {
+	text-align: center;
+	font-family: Arial,Helvetica,sans-serif;
+	font-style: italic;
+	font-size:  1em;
+	position: relative;
+	padding: 0.5em;
+	margin: 0.5em 0.5em 0.5em 150px ;
+}
+	
+* html div#content {
+	height: 1em;  /* Hack gegen Internet Explorer 3Px-Bug */
+}
+
+/*Mithilfe der Filter innerhalb dieser Filter, wird auch ab IE5.5 PNG-Transparenz richtig dargestellt*/
+@media all{
+	* html a {
+		position: relative; /*Bei Verwendung von Filtern ist es nötig "Position: Relative" bei Links, die über gefilterten Bildern sind, zu nutzen*/
+	}
+
+	* html div#main {
+		background-image: none;
+		filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='./images/background3.png');
+	}
+	
+	* html div#header {
+		background-image: none;
+		filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='./images/title3.png');
+	}
+
+	* html div#nav_top {
+		background-image: none;
+		filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='./images/nav_top.png');
+	}
+
+	* html div#nav_body {
+		background-image: none;
+		filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='./images/nav_body.png');
+	}
+
+	* html div#nav_bottom {
+		background-image: none;
+		filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='./images/nav_bottom.png');
+	}
+}
+ 
